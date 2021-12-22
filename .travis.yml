@@ -1,0 +1,14 @@
+language: python
+matrix:
+    include:
+        - python: 3.8
+          dist: bionic
+        - python: 3.8
+          arch: arm64
+          dist: bionic
+
+install:
+    - python3 setup.py install
+
+script:
+    - pytest
